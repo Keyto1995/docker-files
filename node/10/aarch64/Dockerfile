@@ -10,8 +10,6 @@ RUN set -ex \
   # 设置node用户
   && addgroup -g 1000 node \
   && adduser -u 1000 -G node -s /bin/sh -D node \
-  # 更换为科大源
-  && sed -i 's|dl-cdn.alpinelinux.org|mirrors.ustc.edu.cn|g' /etc/apk/repositories \
   # 安装编译工具
   && apk add --no-cache \
     libstdc++ \
